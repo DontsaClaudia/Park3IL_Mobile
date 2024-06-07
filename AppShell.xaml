@@ -6,8 +6,13 @@
     xmlns:local="clr-namespace:Park3IL_Mobile"
     Shell.FlyoutBehavior="Flyout"
     Shell.TabBarIsVisible="False"
-    Shell.NavBarHasShadow="False"
+    
     Title="Park3IL_Mobile">
+
+    <Shell.FlyoutHeader>
+
+        <Image Source="logo3il.png" HorizontalOptions="Start" VerticalOptions="Center" WidthRequest="100" HeightRequest="100" Margin="10"/>
+    </Shell.FlyoutHeader>
 
     <FlyoutItem Title="Dashboard" FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent
@@ -17,6 +22,12 @@
             Icon="homes.png"
             />
 
+        <ShellContent
+            Title="Parcs"
+            ContentTemplate="{DataTemplate local:Parcs}"
+            Route="Parcs"
+            Icon="park.png"/>
+        
         <ShellContent
             Title="Profile"
             ContentTemplate="{DataTemplate local:Profile}"
